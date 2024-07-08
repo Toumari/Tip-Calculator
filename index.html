@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <h1 class="title">SPLI<br />TTER</h1>
+    <div class="card">
+      <div class="left">
+        <form>
+          <label for="billAmount">Bill </label>
+          <div class="bill-input">
+            <i class="fas fa-dollar-sign"></i>
+            <input
+              type="number"
+              name="billAmount"
+              id="billAmount"
+              class="bill-amount"
+            />
+          </div>
+          <div class="tip-percent">
+            <h3>Select Tip %</h3>
+            <div class="tip-percent-buttons">
+              <button class="tip-percent-btn" value="5">5%</button>
+              <button class="tip-percent-btn" value="10">10%</button>
+              <button class="tip-percent-btn" value="15">15%</button>
+              <button class="tip-percent-btn" value="25">25%</button>
+              <button class="tip-percent-btn" value="50">50%</button>
+              <input
+                type="number"
+                name="custom"
+                id="custom"
+                placeholder="Custom"
+                class="custom"
+              />
+            </div>
+          </div>
+          <div class="num-of-people-input">
+            <i class="fas fa-user"></i>
+            <label for="people">Number of People</label>
+            <input type="number" name="people" id="people" class="people" />
+          </div>
+        </form>
+      </div>
+      <div class="right">
+        <div class="tip-amount">
+          <div class="tip-amount-text">
+            <h3>Tip Amount</h3>
+            <p class="pp-label">/ person</p>
+          </div>
+          <div class="tip-amount-value">
+            <h1 class="tip-pp">$0.00</h1>
+          </div>
+        </div>
+        <div class="total-amount">
+          <div class="total-amount-text">
+            <h3>Total</h3>
+            <p class="pp-label">/ person</p>
+          </div>
+          <div class="total-amount-value">
+            <h1 class="total-pp">$0.00</h1>
+          </div>
+        </div>
+
+        <button class="reset-btn" disabled>Reset</button>
+      </div>
+    </div>
+    <script src="index.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(185, 41%, 84%);
+  font-family: "Space Mono", monospace;
+  display: flex;
+  min-height: 100vh;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  color: hsl(183, 100%, 15%);
+  letter-spacing: 0.2em;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.tip-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.tip-button {
+  background-color: hsl(183, 100%, 15%);
+  border: 1px solid hsl(183, 100%, 15%);
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}
+
+.left {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.right {
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  font-size: 0.8rem;
+  padding: 2rem;
+  border-radius: 12px;
+  flex-direction: column;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: start;
+  width: 100%;
+}
+
+.tip-amount,
+.total-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.tip-amount {
+  margin-bottom: 1rem;
+}
+
+.tip-amount-value,
+.total-amount-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(172, 67%, 45%);
+}
+
+.reset-btn {
+  background-color: hsl(172, 67%, 45%);
+  border: none;
+  border-radius: 5px;
+  color: hsl(183, 100%, 15%);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 100%;
+  margin-top: auto;
+  padding: 1rem 1rem;
+  text-transform: uppercase;
+}
+
+.reset-btn:disabled {
+  background-color: hsl(180, 2%, 55%);
+  cursor: not-allowed;
+  color: hsl(180, 1%, 16%);
+  opacity: 0.5;
+}
+
+.reset-btn:hover {
+  background-color: hsl(172, 79%, 68%);
+}
+
+label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+input[type="number"] {
+  position: relative;
+  width: 100%;
+  font-family: inherit;
+  padding: 1rem;
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  text-align: right;
+  font-size: 1.25rem;
+  color: hsl(183, 100%, 15%);
+  font-weight: bold;
+  height: 50px;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px hsl(172, 67%, 45%);
+}
+
+.custom {
+  text-align: center !important;
+}
+
+.bill-input {
+  position: relative;
+}
+
+.num-of-people-input {
+  position: relative;
+}
+
+.fa-user {
+  position: absolute;
+  top: 52%;
+  left: 1rem;
+  transform: translateY(-50%);
+  color: hsl(185, 41%, 84%);
+  z-index: 1;
+}
+
+.fa-dollar-sign {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  color: hsl(185, 41%, 84%);
+  z-index: 1;
+}
+
+.people {
+  margin-bottom: 2rem;
+}
+
+.tip-percent {
+  margin-top: 2rem;
+}
+
+.tip-percent-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.custom {
+  align-self: center;
+  display: inline-block;
+  margin-top: auto;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.tip-percent-btn {
+  background-color: hsl(183, 100%, 15%);
+  border: 1px solid hsl(183, 100%, 15%);
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  height: 50px;
+  text-transform: uppercase;
+}
+
+.tip-percent-btn:hover {
+  background-color: hsl(172, 67%, 45%);
+}
+
+.tip-percent-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px hsl(172, 67%, 45%);
+}
+
+.tip-percent-btn.active {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+}
+
+.pp-label {
+  color: hsl(184, 14%, 56%);
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    justify-content: center;
+  }
+
+  .card {
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2.5rem;
+    max-width: 50%;
+  }
+
+  .title {
+    margin-top: 0;
+  }
+
+  .left {
+    flex: 1;
+  }
+
+  .right {
+    flex: 1;
+  }
+}
