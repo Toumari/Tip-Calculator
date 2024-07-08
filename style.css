@@ -234,7 +234,7 @@ input[type="number"]:focus {
     flex-direction: row;
     gap: 2rem;
     padding: 2.5rem;
-    max-width: 50%;
+    max-width: 70%;
   }
 
   .title {
